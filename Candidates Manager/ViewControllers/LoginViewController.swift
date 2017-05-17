@@ -23,7 +23,7 @@ class LoginViewController: UIViewController
     @IBAction func LoginAction(_ sender: Any) {
         
        
-        if (!(self.emailTextFieled.text?.isEmpty)! && !(self.passwordTextFieled.text?.isEmpty)!) {
+        if (!(self.emailTextFieled.text?.isEmpty)! && !(self.passwordTextFieled.text?.isEmpty)! && !(self.emailTextFieled.text?.hasPrefix(" "))!) {
             
             
             self.loginProcess();

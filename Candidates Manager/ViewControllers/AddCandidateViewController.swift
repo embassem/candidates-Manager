@@ -40,12 +40,22 @@ class AddCandidateViewController: UIViewController,
         
         // TODO: VAlidation Layer
         
-        if (true == true) {
+        if (!(self.nameTextField.text?.isEmpty)! && !(self.positionTextField.text?.isEmpty)! && !(self.nameTextField.text?.hasPrefix(" "))! && !(self.positionTextField.text?.hasPrefix(" "))!) {
             
             self.save()
         }else {
             
             //TODO: Alert Not Valid Input
+            
+            let alert = UIAlertController(title: "Alert", message: "Name and Position are mandatory", preferredStyle: UIAlertControllerStyle.alert);
+            let cancel = UIAlertAction(title: "ok", style: UIAlertActionStyle.cancel, handler: { (cancelAction) in
+                
+                
+            })
+            alert.addAction(cancel);
+            self.present(alert, animated: true, completion: nil);
+            
+            
             
         }
         
